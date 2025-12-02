@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Verse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com ">
+  <link rel="preconnect" href="https://fonts.gstatic.com " crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond :wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/dashbar.css">
+  <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+</head>
+<body>  <div class="nav">
+    <div class="logo">
+      <img src="/images/club-logo-2.png" alt="Logo">
+    </div>
+    <div class="menu" id="menu-nav">
+      <ul>
+        <li><a href="/api/dashboard">Home</a></li>
+        <li><a href="/api/bar">Bars</a></li>
+        <li><a href="/api/logout">Logout</a></li>
+        <% if (typeof user !== 'undefined') { %>
+          <li><a href="#" id="welcome-user">Welcome, <%= user.name %></a></li>
+        <% } %>
+        
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="/videos/BE-BG.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="banner-content">
+      <h2>Say Cheers to Beers, <br>Cocktails, and New Friends</h2>
+      <h3>—Enjoy Your Life</h3>
+      <a href="/api/bar">
+        <button><b>Start Discovering</b></button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Memberships Section -->
+  <section class="collections-section">
+    <div class="section-title">
+      <h2>Membership</h2>
+    </div>
+    <div class="collections-grid">
+      <div class="collection-item">
+        <img src="/images/gold.webp" alt="Gold Membership">
+        <div class="collection-overlay">
+          <h3 class="collection-title">
+            <li>Priority entry</li>
+            <li>1 free welcome drink per visit</li>
+            <li>10% off on drinks and food</li>
+            <li>Birthday offer </li>
+            <li>Access to members-only events </li>
+            <li>Reserved seating on request</li>
+          </h3>
+        </div>
+      </div>
+      <div class="collection-item">
+        <img src="/images/platinum.webp" alt="Platinum Membership">
+        <div class="collection-overlay">
+          <h3 class="collection-title">
+            <li>Everything in Gold</li>
+            <li>1 complimentary guest pass/month</li>
+            <li>Early bird booking for premium events</li>
+            <li>Free entry to 2 paid events/month </li>
+            <li>15% off on drinks, food & merchandise </li>
+            <li>Lounge access or semi-private seating</li>
+          </h3>
+        </div>
+      </div>
+      <div class="collection-item">
+        <img src="/images/diamond.webp" alt="Diamond Membership">
+        <div class="collection-overlay">
+          <h3 class="collection-title">
+            <li>Everything in Platinum</li>
+            <li>Unlimited VIP entry with guest (up to 2)</li>
+            <li>25% off on drinks, food, and private bookings</li>
+            <li>Priority table reservation & exclusive lounge area</li>
+            <li>Private party invites (celebs, DJs, etc.)</li>
+            <li>Personalized name card / plaque at the club</li>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="membership-tier">
+      <div class="tier"><p class="tier-name">Gold</p></div>
+      <div class="tier"><p class="tier-name">Platinum</p></div>
+      <div class="tier"><p class="tier-name">Diamond</p></div>
+    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSesEVk6ahJTSJ_dKVBh_Z-fyFZv4D677N6ha71yJWYvAO4u1Q/viewform?usp=header " target="_blank" id="reg-btn" class="registerbutton">
+      <button><p>Buy Membership</p></button>
+    </a>
+  </section>
+
+  <!-- Featured Amenities -->
+  <section class="featured-section">
+    <div class="section-title">
+      <h2>Upcoming Events</h2>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img"><img src="/images/parmish.webp" alt="Live Parmish Verma"></div>
+        <div class="product-info">
+          <h3>Live Parmish Verma</h3>
+          <p>At The Brew Estate</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"><img src="/images/night.webp" alt="Carnival Night"></div>
+        <div class="product-info">
+          <h3>Carnival Night</h3>
+          <p>At Paara</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"><img src="/images/KG.webp" alt="KG Nights"></div>
+        <div class="product-info">
+          <h3>KG Nights</h3>
+          <p>At Kala Ghoda</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"><img src="/images/boll.png" alt="Bollywood Glow Party"></div>
+        <div class="product-info">
+          <h3>Bollywood Glow Party</h3>
+          <p>At Luna</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h3>TESTIMONIALS</h3>
+    <h2>WHAT OUR CUSTOMERS SAY</h2>
+    <div class="underline"></div>
+    <div class="testimonial-container">
+      <div class="testimonial-box">
+        <span class="quote">“</span>
+        <p>I was genuinely amazed by how seamless ClubVerse makes discovering events and clubs in my city!</p>
+        <div class="testimonial-author">
+          <img src="/images/priya.webp" alt="User 1">
+          <strong>PRIYA MEHRA</strong>
+        </div>
+      </div>
+      <div class="testimonial-box">
+        <span class="quote">“</span>
+        <p>ClubVerse is my new go-to for finding exclusive social events. It’s like having a personal club concierge!</p>
+        <div class="testimonial-author">
+          <img src="/images/rohan-khurana.webp" alt="User 2">
+          <strong>ROHAN KHURANA</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Feed -->
+  <section class="instagram-section">
+    <div class="section-title">
+      <h2>Glimpses of Club Life</h2>
+      <p>Experience the exclusivity and luxury that defines membership at Club Verse</p>
+    </div>
+    <div class="instagram-grid">
+      <% instaImages.forEach(image => { %>
+        <div class="instagram-item">
+          <img src="/images/<%= image %>" alt="Instagram Post <%= image %>">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">♥</span>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="box">
+    <div class="footer">
+      <div class="row">
+        <div class="footer-col logo-col">
+          <img src="/images/club-logo-2.png" alt="The Brew Estate Logo" class="footer-logo">
+        </div>
+        <div class="footer-col">
+          <h4>About us</h4>
+          <ul>
+            <li><a href="/api/ourservices">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="/api/team">our team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="/api/FAQ">FAQ</a></li>
+            <li><a href="/api/contactus">Help Center</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact us</h4>
+          <ul>
+            <li><a href="#">+91 1234567890</a></li>
+            <li><a href="https://mail.google.com/ ">blog9463@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeElements = document.querySelectorAll('.section-title, .collection-item, .product-card, .instagram-item');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      fadeElements.forEach(element => {
+        element.style.opacity = 0;
+        element.style.transform = 'translateY(30px)';
+        element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>
